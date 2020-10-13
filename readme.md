@@ -18,6 +18,7 @@ npm i express mongoose connect-mongo express-session express-handlebars dotenv m
 
 (f)passport-google-oauth20-Helps me in using google oauth together with  passport.
 
+(g)morgan is used for logging requests that have made into our app via the console.
 
 DEV DEPENDENCES
 
