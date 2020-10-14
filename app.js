@@ -2,7 +2,7 @@ const express = require("express");
 const dotenv = require("dotenv");
 const morgan = require("morgan");
 var exphbs  = require('express-handlebars');
-
+const path = require("path")
 
 const connectDB = require("./config/db");
 
@@ -21,6 +21,10 @@ if ((process.env.NODE_ENV = "development")) {
 //Express handle bars
 app.engine('.hbs', exphbs({ defaultLayout:'main',extname: '.hbs'}));
 app.set('view engine', '.hbs');
+
+//Static folder
+//Shall act as a link to my assets.
+app.use(express.static(path.join(__dirname,'public')))
 
 
 //Routes
